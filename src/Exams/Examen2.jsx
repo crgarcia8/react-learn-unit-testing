@@ -4,10 +4,10 @@ import Editor from "@monaco-editor/react";
 const Examen2 = () => {
   const [code, setCode] = useState(`// Escribe tu código aquí
 
-//Crear una funcion llamada multiply que tenga 2 argumentos y devuelva la suma de estos
+//Crea una función llamada multiply que acepte tres argumentos y retorne el resultado de la multiplicación entre ellos.
 
 function multiply(a, b, c) {
-    return c * b * c;
+    return c * b * d;
 };`);
   const [message, setMessage] = useState("");
 
