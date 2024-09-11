@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// App.js
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+import { Routes, Route, Link, Navigate } from "react-router-dom";
+import Examen1 from "./Exams/Examen1";
+import Examen2 from "./Exams/Examen2";
 
+const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div id="links">
+        <Link id="link1" to="/examen1">
+          Examen 1
+        </Link>
+        <Link id="link2" to="/examen2">
+          Examen 2
+        </Link>
+        <Link id="link2" to="/examen3">
+          Examen 3
+        </Link>
+        <Link id="link2" to="/examen4">
+          Examen 4
+        </Link>
+        <Link id="link2" to="/examen5">
+          Examen 5
+        </Link>
+        <Link id="link2" to="/examen6">
+          Examen 6
+        </Link>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Routes>
+        <Route path="/examen1" element={<Examen1 />} />
+        <Route path="/examen2" element={<Examen2 />} />
+        <Route path="*" element={<Navigate to="/examen1" />} />
+      </Routes>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
