@@ -12,7 +12,7 @@ function multiply(a, b, c) {
   const [message, setMessage] = useState("");
 
   const ejecutarPruebas = async (code, unitTest) => {
-    const response = await fetch("http://localhost:3001/execute", {
+    const response = await fetch("https://react-learn-unit-testing-api.vercel.app/execute", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
