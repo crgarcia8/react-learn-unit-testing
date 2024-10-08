@@ -1,7 +1,7 @@
 // App.js
 import "./App.css";
 
-import { Routes, Route, Link, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Examen1 from "./Exams/Examen1";
 import Examen2 from "./Exams/Examen2";
 import Header from "./Header";
