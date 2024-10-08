@@ -1,0 +1,36 @@
+  /* MyFlexPage.css */
+.flex-container {
+  display: flex;
+  height: 90vh; /* Toda la altura del viewport */
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Ambas columnas ocuparán igual espacio horizontal */
+}
+
+.right-column {
+  justify-content: space-between; /* Para que los cuadros se coloquen uno arriba y otro abajo */
+}
+
+.flex-item {
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+}
+
+/* Cuadro inferior derecho con altura fija */
+.bottom-right {
+  padding:12px;
+  height: 200px; /* Altura fija */
+}
+
+/* El cuadro inferior izquierdo llenará el espacio restante */
+.top-left {
+  flex-grow: 1; /* Se expande para llenar el espacio restante */
+}
+
+.top-right {
+  padding:12px;
+  flex-grow: 1; /* Se expande para llenar el espacio restante */
+}

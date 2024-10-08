@@ -1,18 +1,26 @@
+import "./Examen1.css";
+
 import React, { useState } from "react";
 import Editor from "@monaco-editor/react";
+import { URL } from "../config/constants";
+import { Button, Grid2 } from "@mui/material";
+import Plantilla from "./Plantilla";
 
 const Examen1 = () => {
-  const [code, setCode] = useState(`// Escribe tu código aquí
-
-//Crear una funcion llamada sum que tenga 2 argumentos y devuelva la suma de estos
-
-function sum(a, b) {
+  const [code, setCode] = useState(`function sum(a, b) {
     return b + b
 };`);
   const [message, setMessage] = useState("");
 
+  const texto = (
+    <p>
+      Crear una funcion llamada <strong>sum</strong> que tenga 2 argumentos y
+      devuelva la suma de estos
+    </p>
+  );
+
   const ejecutarPruebas = async (code, unitTest) => {
-    const response = await fetch("https://react-learn-unit-testing-api.vercel.app/execute", {
+    const response = await fetch(`${URL}/execute`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,22 +34,28 @@ function sum(a, b) {
     setCode(value);
   };
 
-  return (
-    <div>
-      <Editor
-        height="200px"
-        defaultLanguage="javascript"
-        value={code}
-        theme="vs-dark"
-        onChange={handleEditorChange}
-      />
-      <button onClick={() => ejecutarPruebas(code, "examen1")}>Ejecutar Pruebas</button>
-      <br />
-      <br />
-      <br />
-      <span>{message}</span>
-    </div>
+  const editor = () => (
+    <Editor
+      className="test"
+      defaultLanguage="javascript"
+      value={code}
+      theme="vs-dark"
+      options={{ minimap: { enabled: false } }}
+      onChange={handleEditorChange}
+    />
   );
+
+  const buttonRunTest = () => (
+    <Button
+      variant="contained"
+      onClick={() => ejecutarPruebas(code, "examen1")}
+      fullWidth
+    >
+      Ejecutar Pruebas
+    </Button>
+  );
+
+  return Plantilla(editor, buttonRunTest, texto, message);
 };
 
 export default Examen1;
