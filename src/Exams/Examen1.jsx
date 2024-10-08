@@ -14,8 +14,8 @@ const Examen1 = () => {
 
   const texto = (
     <p>
-      Crear una funcion llamada <strong>sum</strong> que tenga 2 argumentos y
-      devuelva la suma de estos
+      Create a function called <strong>sum</strong> that takes 2 arguments and
+      returns the sum of these.
     </p>
   );
 
@@ -51,7 +51,7 @@ const Examen1 = () => {
       onClick={() => ejecutarPruebas(code, "examen1")}
       fullWidth
     >
-      Ejecutar Pruebas
+      Run Tests
     </Button>
   );
 

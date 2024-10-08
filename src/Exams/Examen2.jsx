@@ -11,8 +11,8 @@ const Examen2 = () => {
   const [message, setMessage] = useState("");
   const texto = (
     <p>
-      Crea una función llamada <strong>multiply</strong> que acepte tres argumentos y retorne
-      el resultado de la multiplicación entre ellos.
+      Create a function called <strong>multiply</strong> that accepts three
+      arguments and returns the result of multiplying them.
     </p>
   );
   const ejecutarPruebas = async (code, unitTest) => {
@@ -47,7 +47,7 @@ const Examen2 = () => {
       onClick={() => ejecutarPruebas(code, "examen2")}
       fullWidth
     >
-      Ejecutar Pruebas
+      Run Tests
     </Button>
   );
 

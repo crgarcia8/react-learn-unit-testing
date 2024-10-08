@@ -11,9 +11,9 @@ const App = () => {
     <>
       <Header/>
       <Routes>
-        <Route path="/examen1" element={<Examen1 />} />
-        <Route path="/examen2" element={<Examen2 />} />
-        <Route path="*" element={<Navigate to="/examen1" />} />
+        <Route path="/challenge1" element={<Examen1 />} />
+        <Route path="/challenge2" element={<Examen2 />} />
+        <Route path="*" element={<Navigate to="/challenge1" />} />
       </Routes>
     </>
   );
