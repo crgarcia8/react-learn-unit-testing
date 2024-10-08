@@ -36,7 +36,7 @@ function multiply(a, b, c) {
         onChange={handleEditorChange}
       />
       <button onClick={() => ejecutarPruebas(code, "examen2")}>
-        Ejecutar Pruebas
+        Ejecutar Pruebas(test)
       </button>
       <br />
       <br />
